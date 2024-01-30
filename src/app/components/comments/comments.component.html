@@ -1,9 +1,15 @@
 
 
 <div class="main-area">
+    <h3>Comments</h3>
+    <div *ngFor="let comment of data" class="comment-item">
+    <strong>{{ comment.name }}</strong>
+    <p>{{ comment.text }}</p>
+    </div>
+
     <div class="content-area">
     <div class="header">
-    <h1>Create a new Post</h1>
+    <h1>Add a comment</h1>
     <hr />
     </div>
     <div class="container">
@@ -11,19 +17,17 @@
     <div class="form-area">
     <h3>Add User's Info</h3>
     <form (ngSubmit)="onSubmit(userForm.value)" #userForm="ngForm">
-        <label>Id</label>
-        <input type="text" name="id" ngModel />
+     
     <label>username</label>
     <input type="text" name="name" ngModel />
      
-              <label>Image</label>
-    <input type="text" name="image" ngModel />
-    <label>Desc</label>
-    <input type="text" name="description" ngModel />
+             
+    <label>Comment</label>
+    <input type="text" name="Comment" ngModel />
      
              
      
-              <input type="submit" value="Login" />
+              <input type="submit" value="Submit" />
     </form>
     </div>
      
